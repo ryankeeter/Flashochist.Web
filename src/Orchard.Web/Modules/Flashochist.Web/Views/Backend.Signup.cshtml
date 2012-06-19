@@ -1,0 +1,16 @@
+﻿@using Flashochist.Web.ViewModels
+@{
+    var s = (SignupViewModel) Model.Signup;
+}
+@using(Html.BeginFormAntiForgeryPost(Url.Action("Signup", "Backend", new {area = "Flashochist.Web"})))
+{
+<fieldset>
+      @Html.EditorFor(m => s.FirstName)
+      @Html.EditorFor(m => s.LastName)
+      @Html.EditorFor(m => s.Email)
+      @Html.EditorFor(m => s.Password)
+      @Html.EditorFor(m => s.RepeatPassword)	
+  </fieldset>
+
+<button type="submit">Sign Up</button>
+}

@@ -1,0 +1,118 @@
+2012-06-19 05:29:22,677 [6] NHibernate.AdoNet.AbstractBatcher - Could not execute query: SELECT this_.Id as Id133_4_, this_.Number as Number133_4_, this_.Published as Published133_4_, this_.Latest as Latest133_4_, this_.Data as Data133_4_, this_.ContentItemRecord_id as ContentI6_133_4_, titlepartr3_.Id as Id132_0_, titlepartr3_.Title as Title132_0_, titlepartr3_.ContentItemRecord_id as ContentI3_132_0_, contentite1_.Id as Id135_1_, contentite1_.Data as Data135_1_, contentite1_.ContentType_id as ContentT3_135_1_, blogpartre2_.Id as Id99_2_, blogpartre2_.Description as Descript2_99_2_, blogpartre2_.PostCount as PostCount99_2_, contenttyp8_.Id as Id136_3_, contenttyp8_.Name as Name136_3_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Title_TitlePartRecord titlepartr3_ on this_.Id=titlepartr3_.Id inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join Orchard_Blogs_BlogPartRecord blogpartre2_ on contentite1_.Id=blogpartre2_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp8_ on contentite1_.ContentType_id=contenttyp8_.Id WHERE this_.Published = @p0 ORDER BY titlepartr3_.Title asc
+System.Data.SqlServerCe.SqlCeLockTimeoutException (0x80004005): SQL Server Compact timed out waiting for a lock. The default lock time is 2000ms for devices and 5000ms for desktops. The default lock timeout can be increased in the connection string using the ssce: default lock timeout property. [ Session id = 2,Thread id = 7276,Process id = 3024,Table name = Orchard_Framework_ContentItemVersionRecord,Conflict type = s lock (ix blocks),Resource = TAB ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2012-06-19 05:29:22,751 [6] NHibernate.Util.ADOExceptionReporter - System.Data.SqlServerCe.SqlCeLockTimeoutException (0x80004005): SQL Server Compact timed out waiting for a lock. The default lock time is 2000ms for devices and 5000ms for desktops. The default lock timeout can be increased in the connection string using the ssce: default lock timeout property. [ Session id = 2,Thread id = 7276,Process id = 3024,Table name = Orchard_Framework_ContentItemVersionRecord,Conflict type = s lock (ix blocks),Resource = TAB ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+2012-06-19 05:29:22,752 [6] NHibernate.Util.ADOExceptionReporter - SQL Server Compact timed out waiting for a lock. The default lock time is 2000ms for devices and 5000ms for desktops. The default lock timeout can be increased in the connection string using the ssce: default lock timeout property. [ Session id = 2,Thread id = 7276,Process id = 3024,Table name = Orchard_Framework_ContentItemVersionRecord,Conflict type = s lock (ix blocks),Resource = TAB ]
+2012-06-19 05:29:22,778 [6] NHibernate.Util.ADOExceptionReporter - System.Data.SqlServerCe.SqlCeLockTimeoutException (0x80004005): SQL Server Compact timed out waiting for a lock. The default lock time is 2000ms for devices and 5000ms for desktops. The default lock timeout can be increased in the connection string using the ssce: default lock timeout property. [ Session id = 2,Thread id = 7276,Process id = 3024,Table name = Orchard_Framework_ContentItemVersionRecord,Conflict type = s lock (ix blocks),Resource = TAB ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+2012-06-19 05:29:22,780 [6] NHibernate.Util.ADOExceptionReporter - SQL Server Compact timed out waiting for a lock. The default lock time is 2000ms for devices and 5000ms for desktops. The default lock timeout can be increased in the connection string using the ssce: default lock timeout property. [ Session id = 2,Thread id = 7276,Process id = 3024,Table name = Orchard_Framework_ContentItemVersionRecord,Conflict type = s lock (ix blocks),Resource = TAB ]
+2012-06-19 05:29:22,871 [6] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id133_4_, this_.Number as Number133_4_, this_.Published as Published133_4_, this_.Latest as Latest133_4_, this_.Data as Data133_4_, this_.ContentItemRecord_id as ContentI6_133_4_, titlepartr3_.Id as Id132_0_, titlepartr3_.Title as Title132_0_, titlepartr3_.ContentItemRecord_id as ContentI3_132_0_, contentite1_.Id as Id135_1_, contentite1_.Data as Data135_1_, contentite1_.ContentType_id as ContentT3_135_1_, blogpartre2_.Id as Id99_2_, blogpartre2_.Description as Descript2_99_2_, blogpartre2_.PostCount as PostCount99_2_, contenttyp8_.Id as Id136_3_, contenttyp8_.Name as Name136_3_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Title_TitlePartRecord titlepartr3_ on this_.Id=titlepartr3_.Id inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join Orchard_Blogs_BlogPartRecord blogpartre2_ on contentite1_.Id=blogpartre2_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp8_ on contentite1_.ContentType_id=contenttyp8_.Id WHERE this_.Published = @p0 ORDER BY titlepartr3_.Title asc ]
+Positional parameters:  #0>True
+[SQL: SELECT this_.Id as Id133_4_, this_.Number as Number133_4_, this_.Published as Published133_4_, this_.Latest as Latest133_4_, this_.Data as Data133_4_, this_.ContentItemRecord_id as ContentI6_133_4_, titlepartr3_.Id as Id132_0_, titlepartr3_.Title as Title132_0_, titlepartr3_.ContentItemRecord_id as ContentI3_132_0_, contentite1_.Id as Id135_1_, contentite1_.Data as Data135_1_, contentite1_.ContentType_id as ContentT3_135_1_, blogpartre2_.Id as Id99_2_, blogpartre2_.Description as Descript2_99_2_, blogpartre2_.PostCount as PostCount99_2_, contenttyp8_.Id as Id136_3_, contenttyp8_.Name as Name136_3_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Title_TitlePartRecord titlepartr3_ on this_.Id=titlepartr3_.Id inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join Orchard_Blogs_BlogPartRecord blogpartre2_ on contentite1_.Id=blogpartre2_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp8_ on contentite1_.ContentType_id=contenttyp8_.Id WHERE this_.Published = @p0 ORDER BY titlepartr3_.Title asc] ---> System.Data.SqlServerCe.SqlCeLockTimeoutException: SQL Server Compact timed out waiting for a lock. The default lock time is 2000ms for devices and 5000ms for desktops. The default lock timeout can be increased in the connection string using the ssce: default lock timeout property. [ Session id = 2,Thread id = 7276,Process id = 3024,Table name = Orchard_Framework_ContentItemVersionRecord,Conflict type = s lock (ix blocks),Resource = TAB ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.List(ISessionImplementor session, QueryParameters queryParameters, ISet`1 querySpaces, IType[] resultTypes)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List[T]()
+   at Orchard.ContentManagement.DefaultContentQuery.Slice(Int32 skip, Int32 count) in C:\Users\Tragerforth\Desktop\Flashochist.Web\src\Orchard\ContentManagement\DefaultContentQuery.cs:line 146
+   at Orchard.ContentManagement.DefaultContentQuery.ContentQuery`1.Orchard.ContentManagement.IContentQuery<T>.List() in C:\Users\Tragerforth\Desktop\Flashochist.Web\src\Orchard\ContentManagement\DefaultContentQuery.cs:line 191
+   at Orchard.Blogs.Services.BlogService.Get(VersionOptions versionOptions)
+   at Orchard.Blogs.Services.BlogService.Get()
+   at Orchard.Blogs.Routing.BlogPathConstraintUpdator.Refresh()
+   at Orchard.Blogs.Routing.BlogPathConstraintUpdator.Orchard.Tasks.IBackgroundTask.Sweep()
+   at Orchard.Tasks.BackgroundService.Sweep() in C:\Users\Tragerforth\Desktop\Flashochist.Web\src\Orchard\Tasks\BackgroundService.cs:line 31
+2012-06-19 05:46:38,805 [11] NHibernate.AdoNet.AbstractBatcher - Could not execute command: UPDATE Flashochist_Web_FlashochistPartRecord SET CreatedAt = @p0, FirstName = @p1, LastName = @p2 WHERE Id = @p3
+System.Data.SqlServerCe.SqlCeException (0x80004005): An overflow occurred while converting to datetime.
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommandText(IntPtr& pCursor, Boolean& isBaseTableCursor)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteNonQuery(IDbCommand cmd)
+2012-06-19 05:46:38,825 [11] NHibernate.Util.ADOExceptionReporter - System.Data.SqlServerCe.SqlCeException (0x80004005): An overflow occurred while converting to datetime.
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommandText(IntPtr& pCursor, Boolean& isBaseTableCursor)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteNonQuery(IDbCommand cmd)
+   at NHibernate.AdoNet.NonBatchingBatcher.AddToBatch(IExpectation expectation)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+2012-06-19 05:46:38,825 [11] NHibernate.Util.ADOExceptionReporter - An overflow occurred while converting to datetime.
+2012-06-19 05:46:38,825 [11] NHibernate.Event.Default.AbstractFlushingEventListener - Could not synchronize database state with session
+NHibernate.Exceptions.GenericADOException: could not update: [Flashochist.Web.Models.FlashochistPartRecord#15][SQL: UPDATE Flashochist_Web_FlashochistPartRecord SET CreatedAt = ?, FirstName = ?, LastName = ? WHERE Id = ?] ---> System.Data.SqlServerCe.SqlCeException: An overflow occurred while converting to datetime.
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommandText(IntPtr& pCursor, Boolean& isBaseTableCursor)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteNonQuery(IDbCommand cmd)
+   at NHibernate.AdoNet.NonBatchingBatcher.AddToBatch(IExpectation expectation)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   --- End of inner exception stack trace ---
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.UpdateOrInsert(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Int32[] dirtyFields, Boolean hasDirtyCollection, Object[] oldFields, Object oldVersion, Object obj, Object rowId, ISessionImplementor session)
+   at NHibernate.Action.EntityUpdateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+2012-06-19 05:46:38,835 [11] NHibernate.Impl.AbstractSessionImpl - DTC transaction prepre phase failed
+NHibernate.Exceptions.GenericADOException: could not update: [Flashochist.Web.Models.FlashochistPartRecord#15][SQL: UPDATE Flashochist_Web_FlashochistPartRecord SET CreatedAt = ?, FirstName = ?, LastName = ? WHERE Id = ?] ---> System.Data.SqlServerCe.SqlCeException: An overflow occurred while converting to datetime.
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommandText(IntPtr& pCursor, Boolean& isBaseTableCursor)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteNonQuery(IDbCommand cmd)
+   at NHibernate.AdoNet.NonBatchingBatcher.AddToBatch(IExpectation expectation)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   --- End of inner exception stack trace ---
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.UpdateOrInsert(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Int32[] dirtyFields, Boolean hasDirtyCollection, Object[] oldFields, Object oldVersion, Object obj, Object rowId, ISessionImplementor session)
+   at NHibernate.Action.EntityUpdateAction.Execute()
+   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable)
+   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list)
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Transaction.AdoNetWithDistrubtedTransactionFactory.DistributedTransactionContext.System.Transactions.IEnlistmentNotification.Prepare(PreparingEnlistment preparingEnlistment)
